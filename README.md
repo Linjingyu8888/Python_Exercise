@@ -54,12 +54,12 @@ print(motorcycles)
 
 2. 在列表中添加元素：
 
-2.1 在列表末尾添加元素：append();
-2.2 在列表中插入元素： insert();
+- 2.1 在列表末尾添加元素：append();
+- 2.2 在列表中插入元素： insert();
 
 3. 在列表中删除元素：
 
-3.1 如果知道要删除的元素在列表中的位置，可使用del语句。如:
+- 3.1 如果知道要删除的元素在列表中的位置，可使用del语句。如:
 
 motorcycles = ['honda', 'yamaha', 'suzuki']
 print(motorcycles)
@@ -67,7 +67,7 @@ print(motorcycles)
 del motorcycles[0]
 print(motorcycles)
 
-3.2 使用pop()删除列表末尾的元素，并能够接着使用它。如：
+- 3.2 使用pop()删除列表末尾的元素，并能够接着使用它。如：
 
 motorcycles = ['honda', 'yamaha', 'suzuki']
 print(motorcycles)
@@ -80,3 +80,19 @@ print(popped_motorcycle)
 ['honda', 'yamaha']
 suzuki
 
+- 3.3 使用pop()来弹除列表中任意位置的元素，只需在圆括号中指定要弹除元素的索引即可。
+
+- 3.4 如果只知道要删除的元素的值，可使用方法remove()。如：
+
+motorcycles = ['honda', 'yamaha', 'suzuki']
+print(motorcycles)
+
+motorcycles.remove('yamaha')
+print(motorcycles)
+
+### 组织列表
+
+1. 使用方法sort()对列表按照字母顺序永久排序，不可返回。使用sort(reverse=True)可按字母相反顺序排列。
+2. 使用sorted()可以按特定顺序呈现，同时不影响它们在列表中的原始排列顺序。
+3. 使用reverse()可以反转列表元素的排列顺序。
+4. 使用len()可以快速获悉列表的长度。
