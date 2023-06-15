@@ -36,11 +36,3 @@ print(motorcycles)
 motorcycles.remove('yamaha')
 print(motorcycles)
 
-
-## 如果只知道要删除的元素的值，可使用方法remove()。如：
-
-motorcycles = ['honda', 'yamaha', 'suzuki']
-print(motorcycles)
-
-motorcycles.remove('yamaha')
-print(motorcycles)
