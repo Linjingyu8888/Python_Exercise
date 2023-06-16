@@ -96,3 +96,101 @@ print(motorcycles)
 2. 使用sorted()可以按特定顺序呈现，同时不影响它们在列表中的原始排列顺序。
 3. 使用reverse()可以反转列表元素的排列顺序。
 4. 使用len()可以快速获悉列表的长度。
+
+## 操作列表
+
+### 遍历整个列表
+ 
+1. 需要对列表中的每个元素都执行相同操作时，可使用Python中的for循环。
+2. 在for循环中，可对每个元素执行任何操作，在代码for magician in magicians:后面每个缩进的代码都是循环的一部分。
+如：
+
+magicians = ['alice', 'david', 'carolina']
+for magician in magicians:
+     print(f"{magician.title()}, that was a great trick!")
+     print(f"I cannot wait to see your next trick, {magician.title()}.\n")
+print("Thank you, everyone. That was a great magic show!")
+
+3. Python根据缩进来判断代码行与前一个代码行的关系。对于位于for语句后面且属于循环组成部分的代码行，一定要缩进。
+
+### 创建数值列表
+
+1. 使用函数range()生成一些列数。如:
+
+for value in range(1,5):
+    print(value)
+
+2. 使用range()创建数字列表。如：
+
+numbers = list(range(1,6))
+print(numbers)
+
+3. 使用range()时，还可以指定步长。函数range()从2开始数，然后不断加2，直到道道或超过终值11。
+如：
+
+even_numbers = list(range(2,11,2))
+print(even_numbers)
+
+4. 使用range()创建一个列表，其中包含前10个整数(1-10)的平方。如:
+
+squares = []
+for value in range(1,11):
+    square = value ** 2
+    squares.append(square)
+ print(squres)
+
+5. 使用min(), max(), sum()可以找到数字列表中的最大值，最小值和总和。如:
+
+digits = [1,2,3,4,5,6,7,8,9,0]
+min(digits)
+max(digits)
+sum(digits)
+
+6. 列表解析可将for循环和创建新元素的代码合并成一行，并自动附加新元素。该方法更便捷。如：
+
+squares = [value**2 for value in range(1,11)]
+print(squares)
+
+### 使用列表的一部分
+
+1. 处理列表的部分元素，Python称之为切片。要创建切片，可指定要使用的第一个元素和最后一个元素的索引。如：
+
+players = ['charles', 'martina', 'michael', 'florence', 'eli']
+print(players[0:3])
+
+2. 遍历切片，可使用for循环。如：
+
+players = ['charles', 'martina', 'michael', 'florence', 'eli']
+print("Here are the first three players on my team:")
+for player in players[:3]:
+    print(player.title())
+
+3. 复制列表并新添加元素。如：
+
+my_foods = ['pizza', 'falafel', 'carrot cake']
+friend_foods = my_foods[:]
+my_foods.append('cannoli')
+friend_foods.append('ice cream')
+
+print("my favorite foods are:")
+print(my_foods)
+
+print("\nMy friend's favorite foods are:")
+print(friend_foods)
+
+### 元组
+
+1. 列表非常适合用于存储在程序运行期间可能变化的数据集，列表是可修改的。Python将不能修改的值称为不可变的，而不可变的列表被称为元组。如：
+
+dimensions = (200,50)
+dimensions[0]=250
+此代码无法运行；
+
+2. 元组看起来很想列表，但使用圆括号而非中括号来标识。可使用索引访问元组的元素，即如访问列表元素一样。
+3. 元组是由逗号标识，圆括号只是让元组看起来更整洁，更清晰。如果要定义只包含一个元素的元组，必须在这个元素后面加上逗号。如：
+my_t = (3,); 然而创建只包含一个元素的元组没有意义，但自动生成的元组有可能只有一个元素。
+4. 遍历元组中的所有值。如：
+
+dimensions = (200,50)
+for dimension in diensions:
+    print(dimensions)

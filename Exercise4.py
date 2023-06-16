@@ -50,7 +50,7 @@ for value in range(3,21,2):
 
 divisable_by_3 = []
 for value in range(3,31):
-    if value%3 == 0:
+    if value % 3 == 0:
        divisable_by_3.append(value)
 print(divisable_by_3)
 
@@ -67,3 +67,31 @@ print(cubes)
 
 cubes = [value**3 for value in range (1,11)]
 print(cubes)
+
+## 遍历切片，可使用for循环。如：
+
+players = ['charles', 'martina', 'michael', 'florence', 'eli']
+print("Here are the first three players on my team:")
+for player in players[:3]:
+    print(player.title())
+
+## 复制列表并新添加元素。如：
+
+my_foods = ['pizza', 'falafel', 'carrot cake']
+friend_foods = my_foods[:]
+my_foods.append('cannoli')
+friend_foods.append('ice cream')
+
+print("my favorite foods are:")
+for my_food in my_foods:
+    print(my_food)
+
+print("\nMy friend's favorite foods are:")
+## for friend_food in friend_foods:
+print(friend_foods)
+
+## 遍历元组中的所有值。如：
+
+dimensions = (200,50)
+for dimension in dimensions:
+    print(dimensions)
