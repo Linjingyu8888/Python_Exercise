@@ -95,3 +95,4 @@ print(friend_foods)
 dimensions = (200,50)
 for dimension in dimensions:
     print(dimensions)
+

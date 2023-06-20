@@ -283,3 +283,119 @@ for requested_topping in requested_toppings:
         print(f"Sorry, we don't have {requested_topping}.")
 print("\nFinished making your pizza!")
 
+## 字典
+
+1. 字典：是一系列键值对。每个键都与一个值相关联，你可使用键来访问相关联的值。python任何对象可用作字典中的值。
+2. 键值对是两个相关联的值。指定键时，python将返回与之相关联的值。键和值之间用冒号分隔，而键值对之间用逗号分隔。如:
+
+alien_0 = {'color': 'green', 'points': 5}
+print(alien_0['color'])
+print(alien_0['points'])
+
+3. 字典是一种动态结构，可随时在其中添加键值对。
+
+### 使用字典
+
+1. 添加键值对：
+
+alien_0 = {'color': 'green', 'points': 5}
+print(alien_0)
+
+alien_0['x_position']=0
+alien_0['y_position']=25
+print(alien_0)
+
+2. 使用字典来存储用户提供的数据或在编写能自动生成大量键值对的代码时，通常需要先定义一个空字典。
+
+alien_0 = {}
+alien_0['color'] = 'green'
+alien_0['points'] = 5
+
+print(alien_0)
+
+3. 修改字典中的值。如:
+
+alien_0 = {'x_position':0, 'y_position': 25, 'speed': 'medium'}
+print(f"Original x_position: {alien_0['x_position']}")
+
+if alien_0['speed'] == 'slow':
+    x_increment = 1
+elif alien_0['speed'] == 'medium':
+    x_increment = 2
+else:
+    x_increment = 3
+
+alien_0['x_position'] = alien_0['x_position'] + x_increment
+
+print(f"New x_position: {alien_0['x_position']}")
+
+4. 对于字典中不再需要的信息，可使用del语句将相应的键值对彻底删除，永远消失。如:
+
+alien_0 = {'color':'green', 'points':5}
+print(alien_0)
+
+del alien_0['points']
+print(alien_0)
+
+5. 当方括号内的指定键不存在时，无法访问会报错，可使用get()来访问值。
+
+alien_0 = {'color':'green', 'points':5}
+
+speed_value = alien_0.get('speed', 'No speed value assigned.')
+print(speed_value)
+
+### 遍历字典
+
+1. 编写遍历字典的for循环，可声明两个变量，用于存储键值对中的键和值。for语句的第二部分包含字典名和方法items()，item()返回一个键值对列表。如:
+
+favorite_languages = {
+    'jen': 'python',
+    'sarah': 'c',
+    'edward': 'ruby',
+    'phil': 'python',
+    }
+for name, language in favorite_languages.items():
+    print(f"{name.title()}'s' favorite language is {language.title()}.")
+
+2. 遍历字典中的所有键且不使用字典中的值，可使用keys()。
+
+favorite_languages = {
+    'jen': 'python',
+    'sarah': 'c',
+    'edward': 'ruby',
+    'phil': 'python',
+    }
+for name in favorite_languages.keys():
+    print(name.title())
+
+3. 按特定顺序遍历字典中的所有键，可用sorted()。
+
+favorite_languages = {
+    'jen': 'python',
+    'sarah': 'c',
+    'edward': 'ruby',
+    'phil': 'python',
+    }
+for name in sorted(favorite_languages.keys()):
+    print(f"{name.title()}, thank you for taking the poll.")
+
+4. 遍历字典中的所有值可用values()且剔除重复值可用set()。
+
+favorite_languages = {
+    'jen': 'python',
+    'sarah': 'c',
+    'edward': 'ruby',
+    'phil': 'python',
+    }
+print("The following languages have been mentioned:")
+for language in set(favorite_languages.values()):
+    print(language.title())
+
+5. 集合和字典很容易混淆，因为它们都是用一对花括号定义。当花括号内没有键值对时，定义的很可能是集合。
+
+### 嵌套
+
+1. 需要将一系列字典存储在列表中，或是将列表作为值存储在字典中，这称为嵌套。
+2. 字典列表。详见练习。
+3. 在字典中存储列表。详见练习。
+4. 在字典中存储字典。详见练习。
