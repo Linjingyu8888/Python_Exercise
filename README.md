@@ -411,7 +411,7 @@ for language in set(favorite_languages.values()):
 ### while循环使用
 
 1. while循环简介：for循环用于针对集合中的每一个元素都执行一个代码块，而while循环则不断运行，直到指定的条件不满足为止。详细内容可参见练习。
-2. 要立即退出while循环，不再运行循环中余下的代码，也不管条件测试的结果如何，可使用break语句。
+2. 要立即退出while循环，不再运行循环中余下的代码，也不管条件测试的结果如何，可使用break语句，break只适用于循环语句。
 3. 在循环中使用continue，返回循环开头，并根据条件测试结果决定是否继续执行循环。可详见练习。
 4. 避免无限循环：每个while循环都必须有停止运行的途径，这样才不会没完没了地执行下去。当程序无限循环时可"ctrl+c"结束。
 
@@ -454,4 +454,4 @@ for language in set(favorite_languages.values()):
 
 ## 类
 
-1. 创建Dog类。在python中，首字母大写的名称指的是类。详见练习9。
+1. 创建Dog类。在python中，首字母大写的名称指的是类。详见练习9。类是将所具有共同特征(attribute)的object集合在一起。
