@@ -6,7 +6,7 @@ class Dog: #定义一个名为Dog的类；
         self.name = name
         self.age = age
 
-    def sit(self):
+    def sit(self): #self is a reference to the current object and cannot use the other word.
         '''模拟小狗收到命令时蹲下'''
         print(f"{self.name} is now sitting.")
 
@@ -17,8 +17,8 @@ class Dog: #定义一个名为Dog的类；
 my_dog = Dog('Willie', 6)
 print(f"My dog's name is {my_dog.name}.")
 print(f"My dog is {my_dog.age} years old.")
-my_dog.sit() #这里call method "sit"
-
+my_dog.sit() #这里call method "sit" (syntactic sugar)
+Dog.sit(my_dog) #该函数和上一个函数实现相同功能 (actual translation)
 
 
 
