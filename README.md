@@ -451,3 +451,7 @@ for language in set(favorite_languages.values()):
 3. 使用as给函数指定别名。
 4. 使用as给模块指定别名。
 5. 导入模块中的所有函数。
+
+## 类
+
+1. 创建Dog类。在python中，首字母大写的名称指的是类。详见练习9。
