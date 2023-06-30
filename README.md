@@ -455,3 +455,4 @@ for language in set(favorite_languages.values()):
 ## 类
 
 1. 创建Dog类。在python中，首字母大写的名称指的是类。详见练习9。类是将所具有共同特征(attribute)的object集合在一起。
+2. 使用类和实例包括给属性指定默认值和修改属性的值。详见练习9。
