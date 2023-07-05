@@ -184,3 +184,50 @@ class ElectricCar (Car):
         #让ElectricCar实例包含这个方法中定义的所有属性。父类也称为超类(superclass)。
 my_tesla = ElectricCar('tesla', 'model s', 2019)
 print(my_tesla.get_descriptive_name())
+
+"""---------------------------------------------------------------"""
+# 给子类定义属性和方法
+class Car:
+    """一次模拟汽车的简单尝试"""
+    def __init__(self, make, model, year):
+        """初始化描述汽车的属性。"""
+        self.make = make 
+        self.model = model
+        self.year = year
+        self.odometer_reading = 50 #在创建实列时，有些属性无须通过形参来定义，可在方法__init__()中为其指定默认值。
+
+    def get_descriptive_name(self):
+        """返回整洁的描述性信息"""
+        long_name = f"{self.year} {self.make} {self.model}"
+        return long_name.title()
+
+    def read_odometer(self):
+        """打印一条指出汽车里程的消息"""#在创建实列时，有些属性无须通过形参来定义，可在方法__init__()中为其指定默认值。
+        print(f"This car has {self.odometer_reading} miles on it.")
+
+    def update_odometer(self, mileage): 
+    #将里程表读数设置为指定的值，禁止将里程表读书往回调。
+        if mileage >= self.odometer_reading:
+            self.odometer_reading = mileage
+        else:
+            print("You can't roll back an odometer!")
+
+    def increment_odometer(self, miles):
+        """将里程表读数增加指定的量"""
+        self.odometer_reading += miles
+
+class ElectricCar (Car):
+    """电动汽车的独特之处。(创建子类时，父类必须包含在当前文件中，且位于子类前面。定义子类时，必须在圆括号内指定父类的名称。)"""
+    def __init__(self, make, model, year):
+        """初始化父类的属性"""
+        super().__init__(make, model, year)
+        self.battery_size = 75 #添加新属性self.battery_size并设置其初始值(75)。
+                               #因为是根据ElectricCar类创建的，Car实例不包含此属性。
+
+    def describe_battery(self):
+        """打印一条描述电瓶容量的消息"""
+        print(f"This car has a {self.battery_size}-kwh battery.")
+my_tesla = ElectricCar('tesla', 'model s', 2019)
+print(my_tesla.get_descriptive_name())
+my_tesla.describe_battery()
+
