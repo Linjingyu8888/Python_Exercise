@@ -224,10 +224,10 @@ class ElectricCar (Car):
         self.battery_size = 75 #添加新属性self.battery_size并设置其初始值(75)。
                                #因为是根据ElectricCar类创建的，Car实例不包含此属性。
 
-    def describe_battery(self):
+    def describe_battery(self): #在此处还添加了一个名为describe_battery()的方法，打印有关电瓶的信息。
         """打印一条描述电瓶容量的消息"""
         print(f"This car has a {self.battery_size}-kwh battery.")
+
 my_tesla = ElectricCar('tesla', 'model s', 2019)
 print(my_tesla.get_descriptive_name())
 my_tesla.describe_battery()
-
